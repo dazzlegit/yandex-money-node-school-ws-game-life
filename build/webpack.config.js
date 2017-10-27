@@ -3,8 +3,8 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // Naming and path settings
-let appName = 'app';
-const entryPoint = './src/main.js';
+const indexEntryPoint = './src/client/index.js';
+const appEntryPoint = './src/client/main.js';
 const exportPath = path.resolve(__dirname, '../dist');
 
 // Enviroment flag
@@ -26,14 +26,15 @@ if (env === 'production') {
 	));
 }
 
-appName = appName + '.js';
-
 // Main Settings config
 module.exports = {
-	entry: entryPoint,
+	entry: {
+		index: indexEntryPoint,
+		app: appEntryPoint,
+	},
 	output: {
 		path: exportPath,
-		filename: appName
+		filename: '[name].js',
 	},
 	module: {
 		loaders: [

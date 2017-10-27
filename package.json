@@ -1,24 +1,23 @@
 {
-  "name": "yandex-money-node-school-ws-client",
+  "name": "yandex-money-node-school-ws-game-life",
   "version": "0.1.0",
-  "description": "Client side for WS demo",
-  "main": "build/app.js",
+  "description": "WS demo",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "WEBPACK_ENV=dev && node ./node_modules/webpack/bin/webpack --progress --colors --watch --config ./build/webpack.config.js",
     "build": "WEBPACK_ENV=production && node ./node_modules/webpack/bin/webpack --config ./build/webpack.config.js",
     "win:dev": "SET WEBPACK_ENV=dev&& node ./node_modules/webpack/bin/webpack --progress --colors --watch --config ./build/webpack.config.js",
-    "win:build": "SET WEBPACK_ENV=production&& node ./node_modules/webpack/bin/webpack --config ./build/webpack.config.js"
+    "win:build": "SET WEBPACK_ENV=production&& node ./node_modules/webpack/bin/webpack --config ./build/webpack.config.js",
+    "start": "node ./src/main.js",
+    "start:dev": "nodemon ./src/main.js --watch"
   },
   "author": "Nikita Rudenko",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:NikitaRudenko/yandex-money-nodeschool-game-life-client.git"
-  },
   "dependencies": {
+    "express": "^4.16.2",
     "vue": "^2.5.2",
-    "vue-material": "^0.7.5"
+    "vue-material": "^0.7.5",
+    "ws": "^3.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

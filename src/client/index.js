@@ -22,11 +22,12 @@ const ADD = 'ADD_POINT';
 const WebSocketWrapper = {
   _ws: null,
   _protocol: 'ws://',
-  _url: 'ws.rudenko.tech/life/api',
+  _url: 'localhost',
+  _port: 8080,
   
   connect(token) {
     if (!this._ws) {
-      this._ws = new WebSocket(`${this._protocol}${this._url}?token=${token}`);
+      this._ws = new WebSocket(`${this._protocol}${this._url}:${this._port}?token=${token}`);
       
       this._ws.onopen = () => {
         console.log('Connection is opened');
