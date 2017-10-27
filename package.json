@@ -4,8 +4,8 @@
   "description": "WS demo",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "WEBPACK_ENV=dev && node ./node_modules/webpack/bin/webpack --progress --colors --watch --config ./build/webpack.config.js",
-    "build": "WEBPACK_ENV=production && node ./node_modules/webpack/bin/webpack --config ./build/webpack.config.js",
+    "dev": "WEBPACK_ENV=dev ./node_modules/.bin/webpack --progress --colors --watch --config ./build/webpack.config.js",
+    "build": "WEBPACK_ENV=production ./node_modules/.bin/webpack --config ./build/webpack.config.js",
     "win:dev": "SET WEBPACK_ENV=dev&& node ./node_modules/webpack/bin/webpack --progress --colors --watch --config ./build/webpack.config.js",
     "win:build": "SET WEBPACK_ENV=production&& node ./node_modules/webpack/bin/webpack --config ./build/webpack.config.js",
     "start": "node ./src/main.js",
